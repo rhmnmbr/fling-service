@@ -59,6 +59,32 @@ $ cp app.env.example app.env
 9. Execute `kubectl apply -f .\K8S\fling-depl.yml` to deploy the backend service.
 10. Execute `kubectl apply -f .\K8S\ingress-svc.yml` to deploy the ingress service.
 
+## Endpoints
+1. Sign up
+   endpoint: `POST` `{{base_url}}/users/sign-up`
+   request body:
+   ```json
+    {
+      "email": "aman@yopmail.com",
+      "password": "password",
+      "phone": "+618123456789",
+      "first_name": "Aman",
+      "birth_date": "1992-12-04",
+      "gender": "male",
+      "location_info": "Bandung, Indonesia",
+      "bio": "Hello."
+    }
+   ```
+3. Login
+   endpoint: `POST` `{{base_url}}/users/login`
+   request body:
+   ```json
+    {
+      "email": "aman@yopmail.com",
+      "password": "password"
+    }
+   ```
+
 ## How to Test and Lint
 
 Make sure you are in the `src` folder
