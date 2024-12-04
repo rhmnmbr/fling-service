@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fling-svc-config
+data:
+  DB_DRIVER: postgres
+  DB_SOURCE: postgresql://root:secret@postgres-clusterip:5432/fling?sslmode=disable
+  MIGRATION_URL: file://db/migration
+  SERVER_ADDRESS: 0.0.0.0:8000
+  TOKERN_SYMMETRIC_KEY: 9I015IL1MD65D6WLWX5RCWPW9R1FHPPC
+  ACCESS_TOKEN_DURATION: 15m

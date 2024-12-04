@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "7607fb17-85ce-41ca-995c-444b09752a2e",
+		"name": "Fling Service (deploy)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6983486"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"aman@yopmail.com\",\r\n    \"password\": \"password\",\r\n    \"phone\": \"+618123456789\",\r\n    \"first_name\": \"Aman\",\r\n    \"birth_date\": \"1992-12-04\",\r\n    \"gender\": \"male\",\r\n    \"location_info\": \"Bandung, Indonesia\",\r\n    \"bio\": \"Hello.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.fling.local/users/sign-up",
+					"protocol": "https",
+					"host": [
+						"api",
+						"fling",
+						"local"
+					],
+					"path": [
+						"users",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"aman@yopmail.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.fling.local/users/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"fling",
+						"local"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

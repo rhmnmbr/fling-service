@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-svc
+  labels:
+    name: ingress-svc
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+      - api.fling.local
+      secretName: fling-tls
+  rules:
+  - host: api.fling.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: fling-clusterip
+            port:
+              number: 8000
