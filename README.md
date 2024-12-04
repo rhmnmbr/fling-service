@@ -58,6 +58,7 @@ $ cp app.env.example app.env
 8. Execute `kubectl apply -f .\K8S\postgres-depl.yml` to deploy the postgres service.
 9. Execute `kubectl apply -f .\K8S\fling-depl.yml` to deploy the backend service.
 10. Execute `kubectl apply -f .\K8S\ingress-svc.yml` to deploy the ingress service.
+11. Add `api.fling.local` to point to your localhost in hosts file. For example in windows open `C:\Windows\System32\drivers\etc\hosts` with administrator privileges and insert `127.0.0.1 api.fling.local`.
 
 ## Endpoints
 1. Sign up
