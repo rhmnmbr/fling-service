@@ -19,6 +19,7 @@ A backend system for a Dating Mobile App called **Fling**.
 - Install `Makefile` -  https://www.gnu.org/software/make/
 - Install `Go` - https://go.dev/dl/
 - Install `Postman` - https://www.postman.com/downloads/
+- Install `kubectl` - https://kubernetes.io/docs/tasks/tools/#kubectl
 
 ## Getting Started
 
